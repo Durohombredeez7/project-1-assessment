@@ -11,6 +11,7 @@ output {
     height: 100px;
     width: 100px;
     margin: auto;
+    font-size: 50px;
 }
 
 .panel {

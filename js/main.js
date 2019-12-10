@@ -1,19 +1,38 @@
-var plus = i;
-var minus = j;
+let totalSum = 0;
+const plus = document.getElementById('plus');
+const minus = document.getElementById('minus');
+const input = document.getElementById('input');
+const output = document.getElementById('result');
 
+output.textContent = totalSum;
 
-for (let i = 0; i < 200;i++) {
-    // find a way to use this to implement addition
-    // and use j-- for subtraction
-    // try to apply this function to my "result" output
+plus.addEventListener('click',() => {
+  // console.log('plus is clicked');
+  // add input into the totalSum
+  // console.log(input.value);
+  totalSum += parseInt(input.value);
+  output.textContent = totalSum;
+  if (totalSum < 0) {
+    // console.log('negative num')
+    output.style.color = 'red';
+  } else {
+    output.style.color = 'black';
+  }
+})
 
-}
+minus.addEventListener('click',() => {
+  // console.log('minus is clicked');
+  // subtract input from the totalSum
+  // console.log(input.value);
+  totalSum -= parseInt(input.value);
+  output.textContent = totalSum;
+  if (totalSum < 0) {
+    // console.log('negative num')
+    output.style.color = 'red';
+  } else {
+    output.style.color = 'black';
+  }
+})
 
-function eventHandler(onClick) {
-        if (Object.onclick == 'plus') {
-          console.log("adding");
-        } else (Object.onclick == 'minus') {
-          console.log("subtracting");
-        }}
 
 
